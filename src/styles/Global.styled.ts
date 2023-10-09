@@ -19,7 +19,6 @@ export const GlobalStyled = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  
     color: ${theme.color.font};
   }
 
