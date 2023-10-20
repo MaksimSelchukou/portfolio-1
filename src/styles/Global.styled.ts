@@ -46,6 +46,11 @@ export const GlobalStyled = createGlobalStyle`
   section:nth-of-type(odd) {
     background-color: ${theme.color.primaryBg}
   }
+  
+  textarea {
+    resize: none;
+    height: 155px;
+  }
 
   section:nth-of-type(even) {
     background-color: ${theme.color.secondaryBg}
@@ -58,7 +63,7 @@ export const GlobalStyled = createGlobalStyle`
     letter-spacing: 1px;
   }
 
-  p{
+  p {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;

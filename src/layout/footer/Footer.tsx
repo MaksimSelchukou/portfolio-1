@@ -2,63 +2,115 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {theme} from '../../styles/Theme';
 
 export const Footer = () => {
     return (
         <StyledFooter>
             <FlexWrapper align={'center'} direction={'column'}>
-        <Name>Maxim</Name>
-            <SocialList>
-                <SocialItem>
-                    <SocialIconLink>
-                        <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'instagram'}/>
-                    </SocialIconLink>
-                </SocialItem>
-                <SocialItem>
-                    <SocialIconLink>
-                        <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'telegram'}/>
-                    </SocialIconLink>
-                </SocialItem>
-                <SocialItem>
-                    <SocialIconLink>
-                        <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'vk'}/>
-                    </SocialIconLink>
-                </SocialItem>
-                <SocialItem>
-                    <SocialIconLink>
-                        <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'linkedin'}/>
-                    </SocialIconLink>
-                </SocialItem>
-            </SocialList>
-            <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+                <Name>Maxim</Name>
+                <SocialList>
+                    <SocialItem>
+                        <SocialIconLink>
+                            <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'instagram'}/>
+                        </SocialIconLink>
+                    </SocialItem>
+                    <SocialItem>
+                        <SocialIconLink>
+                            <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'telegram'}/>
+                        </SocialIconLink>
+                    </SocialItem>
+                    <SocialItem>
+                        <SocialIconLink>
+                            <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'vk'}/>
+                        </SocialIconLink>
+                    </SocialItem>
+                    <SocialItem>
+                        <SocialIconLink>
+                            <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={'linkedin'}/>
+                        </SocialIconLink>
+                    </SocialItem>
+                </SocialList>
+                <Copyright>© 2023, All Rights Reserved.</Copyright>
             </FlexWrapper>
         </StyledFooter>
     );
 };
 
 
-
 const StyledFooter = styled.footer`
-  min-height: 30vh;
-  background-color: #fdf1b7;
+  background-color: ${theme.color.primaryBg};
+  padding: 40px 0;
 `
 
 const Name = styled.span`
-
+  //margin-top: 40px;
+  font-family: Josefin Sans, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
 `
 
 const SocialList = styled.ul`
   display: flex;
-  gap:30px
+  gap: 34px;
+  margin: 37px 0;
 `
 
 const SocialItem = styled.li`
 `
 
+// const SocialIconLink = styled.a`
+//   position: relative;
+//   z-index: 0;
+//
+//   &::before {
+//     content: '';
+//     display: inline-block;
+//     width: 35px;
+//     height: 35px;
+//     border-radius: 25px;
+//     z-index: -1;
+//     background-color: rgba(255, 255, 255, 0.10);
+//     position: absolute;
+//     left: 50%;
+//     top: 25%;
+//     transform: translate(-50%, -50%);
+//   }
+//
+//   &:hover {
+//     position: relative;
+//     top: -50%;
+//
+//     &::before {
+//       left: 50%;
+//       top: 25%;
+//       background-color: ${theme.color.accent};
+//     }
+//   }
+//
+// `
+
 const SocialIconLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.10);
+  color: ${theme.color.accent};
+  &:hover {
+    position: relative;
+    top: -30%;
+    color: ${theme.color.primaryBg};
+    background-color: ${theme.color.accent};
+  }
 
 `
 
 const Copyright = styled.small`
-
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 12px;
+  font-weight: 400;
 `

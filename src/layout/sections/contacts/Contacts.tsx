@@ -36,6 +36,7 @@ const StyledForm = styled.form`
 
 `
 const Field = styled.input`
+  
   margin-bottom: 16px;
   width: 100%;
   border: 1px solid #4A4A4A;
