@@ -25,7 +25,6 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-  //min-height: 50vh;
 `
 const StyledForm = styled.form`
   max-width: 540px;
