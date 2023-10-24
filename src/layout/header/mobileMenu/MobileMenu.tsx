@@ -3,10 +3,13 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 
-export const HeaderMenu = ({menuItems}: { menuItems: Array<string> }) => {
+export const MobileMenu = ({menuItems}: { menuItems: Array<string> }) => {
     return (
-        <>
-            <StyledHeaderMenu>
+        <StyledMobileMenu>
+            <BurgerButton isOpen={true}>
+                <span></span>
+            </BurgerButton>
+            <MobiledMenuPopup isOpen={true}>
                 <ListItems>
                     {menuItems.map((item, ind) => {
                         return (
@@ -24,55 +27,80 @@ export const HeaderMenu = ({menuItems}: { menuItems: Array<string> }) => {
                         )
                     })}
                 </ListItems>
-            </StyledHeaderMenu>
-            <BurgerMenu>
-                <ItemBurgerMenu></ItemBurgerMenu>
-                <ItemBurgerMenu></ItemBurgerMenu>
-                <ItemBurgerMenu></ItemBurgerMenu>
-            </BurgerMenu>
-        </>
+            </MobiledMenuPopup>
+        </StyledMobileMenu>
+
+
     );
 };
 
-const BurgerMenu = styled.div`
-  display: none;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-`
 
-const ItemBurgerMenu = styled.span`
-  width: 30px;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  transition: all 0.5s;
+const StyledMobileMenu = styled.nav`
 
-  &:nth-of-type(2) {
-    top: calc(50% - 5px);
-  }
-
-  &:nth-of-type(3) {
-    top: calc(50% + 5px);
-  }
-`
-
-
-const StyledHeaderMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-  }
 
   @media ${theme.media.tablet} {
     display: none;
   }
+`
+
+const MobiledMenuPopup = styled.div<{ isOpen: boolean }>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  //width: 100%;
+  background-color: rgba(31, 31, 32, 0.90);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+  }
+`
+
+const BurgerButton = styled.button<{ isOpen: boolean }>`
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  //top: -100px;
+  //right: -100px;
+  border: 1px solid red;
+
+  span {
+    display: block;
+    width: 36px;
+    height: 2px;
+    background-color: ${theme.color.font};
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+
+
+    &::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 2px;
+      background-color: ${theme.color.font};
+      position: absolute;
+      transform: translateY(-10px);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 2px;
+      background-color: ${theme.color.font};
+      position: absolute;
+      transform: translateY(-18px);
+    }
+  }
+
 
 `
 
