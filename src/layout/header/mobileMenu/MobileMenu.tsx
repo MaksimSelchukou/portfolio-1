@@ -40,6 +40,11 @@ export const MobileMenu = ({menuItems}: { menuItems: Array<string> }) => {
 
 const StyledMobileMenu = styled.nav`
   display: none;
+  //width: 30px;
+  //height: 30px;
+  //position: relative;
+  //z-index: 2;
+  //overflow: hidden;
 
   @media ${theme.media.tablet} {
     display: block;
@@ -74,9 +79,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
   width: 100px;
   height: 100px;
-  //top: -100px;
-  //right: -100px;
-  border: 1px solid red;
   z-index: 999999;
 
   span {
