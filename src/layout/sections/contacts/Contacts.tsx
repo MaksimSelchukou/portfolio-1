@@ -25,6 +25,12 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
+  @media ${theme.media.mobile}{
+    ${SectionTitle}{
+      margin-bottom: 70px;
+    }
+  }
+   
 `
 const StyledForm = styled.form`
   max-width: 540px;
