@@ -21,50 +21,14 @@ export const TabMenu = ({menuItems}: { menuItems: Array<string> }) => {
 
 
 const StyledTabMenu = styled.nav`
-  margin-bottom: 40px;
 
-  ul {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
 `
 const ListItems = styled.ul`
-
+  display: flex;
+  justify-content: space-between;
+  max-width: 352px;
+  width: 100%;
+  margin: 0 auto 40px;
 `
 const ListItem = styled.li`
-  //position: relative;
-  //z-index: 0;
-
 `
-
-// const Link = styled.a`
-//   font-size: 14px;
-//   font-weight: 400;
-//   letter-spacing: 1px;
-//   text-transform: uppercase;
-//   padding: 10px;
-//
-//
-//   &::before {
-//     content: '';
-//     display: inline-block;
-//
-//     background-color: ${theme.color.accent};
-//
-//
-//     position: absolute;
-//     bottom: -6px;
-//     left: 0;
-//     right: 0;
-//     z-index: -1;
-//   }
-//
-//   &:hover {
-//     &::before {
-//       height: 10px;
-//     }
-//   }
-//
-// }
-// `
