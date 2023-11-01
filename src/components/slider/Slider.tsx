@@ -40,10 +40,10 @@ const Slide = styled.div`
 `
 
 const SlideText = styled.p`
-  //margin: 72px 0 22px;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
+  
 `
 
 const SlideName = styled.span`
