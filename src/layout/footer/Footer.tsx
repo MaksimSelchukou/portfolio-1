@@ -44,11 +44,13 @@ const StyledFooter = styled.footer`
 `
 
 const Name = styled.span`
-  //margin-top: 40px;
   font-family: Josefin Sans, sans-serif;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 3px;
+  @media ${theme.media.mobile} {
+    font-size: 16px
+  }
 `
 
 const SocialList = styled.ul`
@@ -60,36 +62,6 @@ const SocialList = styled.ul`
 const SocialItem = styled.li`
 `
 
-// const SocialIconLink = styled.a`
-//   position: relative;
-//   z-index: 0;
-//
-//   &::before {
-//     content: '';
-//     display: inline-block;
-//     width: 35px;
-//     height: 35px;
-//     border-radius: 25px;
-//     z-index: -1;
-//     background-color: rgba(255, 255, 255, 0.10);
-//     position: absolute;
-//     left: 50%;
-//     top: 25%;
-//     transform: translate(-50%, -50%);
-//   }
-//
-//   &:hover {
-//     position: relative;
-//     top: -50%;
-//
-//     &::before {
-//       left: 50%;
-//       top: 25%;
-//       background-color: ${theme.color.accent};
-//     }
-//   }
-//
-// `
 
 const SocialIconLink = styled.a`
   display: flex;
@@ -100,6 +72,7 @@ const SocialIconLink = styled.a`
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.10);
   color: ${theme.color.accent};
+
   &:hover {
     position: relative;
     top: -30%;
