@@ -16,26 +16,27 @@ export const Skills = () => {
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut\n' +
                                '                labore et dolore magna aliqua Ut enim'}
                     />
-                    <Skill iconID={'code'} skillTitle={'html5'}
+                    <Skill iconID={'css'} skillTitle={'css3'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut\n' +
                                '                labore et dolore magna aliqua Ut enim'}
                     />
-                    <Skill iconID={'code'} skillTitle={'html5'}
+                    <Skill iconID={'react'} skillTitle={'react'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut\n' +
                                '                labore et dolore magna aliqua Ut enim'}
                     />
-                    <Skill iconID={'code'} skillTitle={'html5'}
+                    <Skill iconID={'typeScript'} skillTitle={'typescript'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut\n' +
                                '                labore et dolore magna aliqua Ut enim'}
                     />
-                    <Skill iconID={'code'} skillTitle={'html5'}
+                    <Skill iconID={'styledComponents'} skillTitle={'styled components'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut\n' +
                                '                labore et dolore magna aliqua Ut enim'}
                     />
-                    <Skill iconID={'code'} skillTitle={'html5'}
+                    <Skill iconID={'figma'} skillTitle={'web design'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut\n' +
                                '                labore et dolore magna aliqua Ut enim'}
                     />
+
                 </FlexWrapper>
             </Container>
         </StyledSkills>

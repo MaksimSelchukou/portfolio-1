@@ -27,7 +27,7 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
   width: 330px;
-  padding: 62px 20px 40px;
+  padding: 50px 20px 50px;
   flex-grow: 1;
   
   @media ${theme.media.mobile}{
