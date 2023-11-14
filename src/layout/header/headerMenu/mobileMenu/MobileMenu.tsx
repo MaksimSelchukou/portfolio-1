@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled, {css} from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {theme} from "../../../../styles/Theme";
+import {Menu} from "../menu/Menu";
 
 
 export const MobileMenu = ({menuItems}: { menuItems: Array<string> }) => {
@@ -12,24 +13,9 @@ export const MobileMenu = ({menuItems}: { menuItems: Array<string> }) => {
             <BurgerButton onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
                 <span></span>
             </BurgerButton>
+
             <MobiledMenuPopup onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
-                <ListItems>
-                    {menuItems.map((item, ind) => {
-                        return (
-                            <ListItem key={ind}>
-                                <Link href="src/layout/sections/works/tabMenu/TabMenu">
-                                    {item}
-                                    <Mask>
-                                        <span>{item}</span>
-                                    </Mask>
-                                    <Mask>
-                                        <span>{item}</span>
-                                    </Mask>
-                                </Link>
-                            </ListItem>
-                        )
-                    })}
-                </ListItems>
+                <Menu menuItems={menuItems}/>
             </MobiledMenuPopup>
         </StyledMobileMenu>
 
@@ -40,12 +26,6 @@ export const MobileMenu = ({menuItems}: { menuItems: Array<string> }) => {
 
 const StyledMobileMenu = styled.nav`
   display: none;
-  //width: 30px;
-  //height: 30px;
-  //position: relative;
-  //z-index: 2;
-  //overflow: hidden;
-
   @media ${theme.media.tablet} {
     display: block;
   }
@@ -121,77 +101,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(-45deg) translateY(0);
       `}
-    }
-  }
-
-
-`
-
-const ListItems = styled.ul`
-
-`
-
-
-const Link = styled.a`
-  font-family: Josefin Sans, sans-serif;
-  text-align: center;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  color: transparent;
-`
-
-const Mask = styled.span`
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: inline-block;
-  height: 50%;
-  overflow-y: hidden;
-  //outline: 1px solid red;
-  color: ${theme.color.accent};
-
-  & + & {
-    top: 50%;
-
-    span {
-      display: inline-block;
-      transform: translateY(-50%);
-    }
-  }
-`
-
-const ListItem = styled.li`
-  position: relative;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    height: 3px;
-    background-color: ${theme.color.accent};
-
-    position: absolute;
-    top: 50%;
-    left: -10px;
-    right: -10px;
-    z-index: 1;
-
-    transform: scale(0);
-
-  }
-
-  &:hover {
-    &::before {
-      transform: scale(1);
-    }
-
-    ${Mask} {
-      transform: skewX(12deg) translateX(5px);
-      color: ${theme.color.font};
-
-      & + ${Mask} {
-        transform: skewX(12deg) translateX(-5px);
-      }
     }
   }
 `

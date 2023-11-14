@@ -3,20 +3,21 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from '../../components/FlexWrapper';
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import {MobileMenu} from "./mobileMenu/MobileMenu";
+import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
+import {DesktopMenu} from "./headerMenu/desktopMenu/HeaderMenu";
+import {useViewport} from "../../hooks/useViewport";
 
 export const Header = () => {
 
     const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact']
+    const {width, breakPoint} = useViewport()
+
     return (
         <StyledHeader>
             <Container>
                 <FlexWrapper align={'center'} justify={'space-between'}>
                     <Logo/>
-                    <HeaderMenu menuItems={items}/>
-                    <MobileMenu menuItems={items}/>
-
+                    {width > breakPoint ? <DesktopMenu menuItems={items}/> : <MobileMenu menuItems={items}/>}
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -31,6 +32,4 @@ const StyledHeader = styled.header`
   right: 0;
   left: 0;
   z-index: 99999;
-  
-  
 `
