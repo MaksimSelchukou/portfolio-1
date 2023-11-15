@@ -13,12 +13,10 @@ export const MobileMenu = ({menuItems}: { menuItems: Array<string> }) => {
                 <span></span>
             </S.BurgerButton>
 
-            <S.MobileMenuPopup onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
+            <S.MobileMenuPopup onClick={() => setIsOpen(false)} isOpen={isOpen}>
                 <Menu menuItems={menuItems}/>
             </S.MobileMenuPopup>
         </S.MobileMenu>
-
-
     );
 };
 
