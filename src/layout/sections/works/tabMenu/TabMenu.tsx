@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link} from '../../../../components/Link';
+import {StatusType} from "../Works";
 
+type TabMenuType = {
+    filter: StatusType
+    setFilter: (filter: StatusType) => void
+    tabsItems: Array<{ title: string, status: StatusType }>
+}
 
-export const TabMenu = ({menuItems}: { menuItems: Array<string> }) => {
+//export const TabMenu = ({tabsItem,filter:StatusType}: Array<{title:string,status: StatusType}> }) => {
+export const TabMenu: React.FC<TabMenuType> = ({...props}: TabMenuType) => {
     return (
         <StyledTabMenu>
             <ListItems>
-                {menuItems.map((item, ind) => {
+                {props.tabsItems.map((item, ind) => {
                     return (
                         <ListItem key={ind}>
-                            <Link href="src/layout/sections/works/tabMenu/TabMenu.tsx">{item}</Link>
+                            <Link active={props.filter === item.status} as={'button'}
+                                  onClick={() => props.setFilter(item.status)}>{item.title}
+                            </Link>
                         </ListItem>
                     )
                 })}
