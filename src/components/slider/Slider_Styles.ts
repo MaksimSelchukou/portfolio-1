@@ -2,10 +2,11 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 const Slider = styled.div`
+  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
 `
 
 const Slide = styled.div`
@@ -27,22 +28,8 @@ const SlideName = styled.span`
   margin: 22px 0 42px;
   display: inline-block;
 `
-const SlidePagination = styled.span`
-  span {
-    display: inline-block;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.50);
-    width: 7px;
-    height: 7px;
-    margin: 5px;
 
-    &.active {
-      width: 20px;
-      background-color: ${theme.color.accent};
-    }
-  }
-`
 
 export const S = {
-    Slider, Slide, SlideText, SlideName, SlidePagination
+    Slider, Slide, SlideText, SlideName,
 }
