@@ -67,6 +67,9 @@ export const Slider = () => (
     <S.Slider>
 
         <AliceCarousel
+            autoPlay
+            autoPlayInterval={1000}
+            infinite
             mouseTracking
             items={items}
         />
