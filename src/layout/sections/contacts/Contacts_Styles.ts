@@ -3,6 +3,7 @@ import {theme} from "../../../styles/Theme";
 import {SectionTitle} from "../../../components/SectionTitle";
 
 const Contacts = styled.section`
+  position: relative;
   @media ${theme.media.mobile} {
     ${SectionTitle} {
       margin-bottom: 70px;

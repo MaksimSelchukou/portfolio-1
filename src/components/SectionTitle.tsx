@@ -3,8 +3,10 @@ import {theme} from "../styles/Theme";
 import {font} from "../styles/Common";
 
 type SectionTitlePropsType = {}
+
+
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
-  ${font({fontFamily: "'Josefin Sans', sans-serif", fontWeight: 600, Fmax: 36, Fmin: 30,letterSpacing:'5px'})}
+  ${font({fontFamily: "'Josefin Sans', sans-serif", fontWeight: 600, Fmax: 36, Fmin: 30, letterSpacing: '5px'})}
   text-align: center;
   margin-bottom: 90px;
   position: relative;

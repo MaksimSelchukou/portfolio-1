@@ -62,14 +62,11 @@ export const Works = () => {
 
 
     return (
-        <S.Works>
+        <S.Works id={'Works'}>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu filter={filter} setFilter={setFilter} tabsItems={tabsItems}/>
                 <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
-                    {/*{workData.map((w, i) => {*/}
-                    {/*    return (<Work key={i} srcImg={w.srcImg} title={w.title} text={w.text}/>)*/}
-                    {/*})}*/}
                     {filteredWorkData.map((w, i) => {
                         return (<Work key={i} srcImg={w.srcImg} title={w.title} text={w.text}/>)
                     })}

@@ -1,23 +1,25 @@
-import React from 'react';
 import photo from '../../../assets/images/photo.jpg'
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Container} from "../../../components/Container";
+
 import {S} from './Main_Styles'
 import Typewriter from 'typewriter-effect';
 import '../../../styles/TypeWritter.css'
 import Tilt from 'react-parallax-tilt';
 import '../../../styles/Main.css'
+import {Container} from '../../../components/Container';
 
 
 export const Main = () => {
+
+
     return (
-        <S.Main>
+        <S.Main id={'Home'}>
             <Container>
                 <FlexWrapper align={'center'} justify={'space-around'} wrap={'wrap'}>
                     <div>
                         <S.SmallText>Hi There</S.SmallText>
                         <S.Name>I am <span>Maksim Selchukou</span></S.Name>
-                        {/*<S.MainTitle>A Web Developer</S.MainTitle>*/}
+
                         <S.MainTitle>
                             <Typewriter
                                 options={{
@@ -29,10 +31,6 @@ export const Main = () => {
                             /></S.MainTitle>
 
                     </div>
-                    {/*<S.PhotoWrapper>*/}
-                    {/*    <S.Photo src={photo}/>*/}
-                    {/*</S.PhotoWrapper>*/}
-
                     <Tilt
                         className="parallax-effect-img"
                         tiltMaxAngleX={40}
