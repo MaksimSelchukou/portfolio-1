@@ -13,7 +13,7 @@ const Name = styled.span`
   font-weight: 700;
   letter-spacing: 3px;
   @media ${theme.media.mobile} {
-    font-size: 16px
+    font-size: 16px;
   }
 `
 
@@ -32,14 +32,17 @@ const SocialIconLink = styled.a`
   height: 35px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.10);
+
   color: ${theme.color.accent};
 
+  transition: ${theme.animations.transition};
+
   &:hover {
-    position: relative;
-    top: -30%;
     color: ${theme.color.primaryBg};
     background-color: ${theme.color.accent};
+    transform: translateY(-4px);
   }
+
 
 `
 

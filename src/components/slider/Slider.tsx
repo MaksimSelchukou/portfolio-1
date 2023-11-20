@@ -8,30 +8,6 @@ type SlideProps = {
     text: string
     name: string
 }
-// export const Slider = () => {
-//     return (
-//         <S.Slider>
-//             <FlexWrapper>
-//                 <S.Slide>
-//                     <S.SlideText>
-//                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-//                         labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing
-//                         elit.
-//                     </S.SlideText>
-//                     <S.SlideName>
-//                         @ivan ivanow
-//                     </S.SlideName>
-//                 </S.Slide>
-//             </FlexWrapper>
-//             <S.SlidePagination>
-//                 <span> </span>
-//                 <span className={'active'}> </span>
-//                 <span> </span>
-//             </S.SlidePagination>
-//         </S.Slider>
-//     );
-// };
-
 
 const Slide = ({text, name}: SlideProps) => {
     return (
@@ -65,7 +41,6 @@ const items = [
 
 export const Slider = () => (
     <S.Slider>
-
         <AliceCarousel
             autoPlay
             autoPlayInterval={1000}

@@ -8,8 +8,9 @@ import {Button} from "../../../components/Button";
 //Works
 
 const Works = styled.section`
-  
+
   position: relative;
+
   ${FlexWrapper} {
     gap: 30px;
   }
@@ -44,7 +45,8 @@ const ImageWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -1%);
+    transition: ${theme.animations.transition};
 
     &::before {
       width: 100%;
@@ -62,6 +64,7 @@ const ImageWrapper = styled.div`
     bottom: 0;
     background: rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(4px);
+    transition: ${theme.animations.transition};
   }
 
   &:hover {
@@ -71,6 +74,7 @@ const ImageWrapper = styled.div`
 
     ${Button} {
       opacity: 1;
+      transform: translate(-50%, -50%);
     }
   }
 

@@ -21,7 +21,7 @@ export const Footer = () => {
                         return (
                             <li key={ind}>
                                 <S.SocialIconLink>
-                                    <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconID={i.iconID}/>
+                                    <Icon height={'21'} width={'21'} viewBox={'0 0 21 21'} iconID={i.iconID}/>
                                 </S.SocialIconLink>
                             </li>
                         )
