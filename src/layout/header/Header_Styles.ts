@@ -73,7 +73,7 @@ const ListItem = styled.li`
 //Mobile Menu
 
 const MobileMenu = styled.nav`
-
+  cursor: pointer;
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -89,6 +89,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   align-items: center;
   transform: translateY(-100%);
   transition: .8s ease-in-out;
+  
 
 
   ul {
@@ -114,6 +115,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   width: 100px;
   height: 100px;
   z-index: 999999;
+  cursor: pointer;
 
   span {
     display: block;
@@ -123,6 +125,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     left: -40px;
     bottom: 100px;
+    cursor: pointer;
 
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`

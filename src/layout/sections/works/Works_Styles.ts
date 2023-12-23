@@ -3,6 +3,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../styles/Theme";
 import {Link} from "../../../components/Link";
 import {Button} from "../../../components/Button";
+import { motion } from "framer-motion";
 
 
 //Works
@@ -18,9 +19,7 @@ const Works = styled.section`
 
 //Work
 
-const Work = styled.div`
-  flex-grow: 1;
-  width: 330px;
+const Work = styled(motion.div)`
   background-color: ${theme.color.secondaryBg};
 
 
@@ -32,9 +31,9 @@ const Work = styled.div`
     }
   }
 
-  @media ${theme.media.desktop} {
-    max-width: 540px;
-  }
+  // @media ${theme.media.desktop} {
+  //   max-width: 540px;
+  // }
 `
 
 const ImageWrapper = styled.div`
@@ -110,7 +109,13 @@ const Description = styled.div`
   padding: 25px 20px;
 `
 
+const Box = styled.div`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: red
+`
 
 export const S = {
-    Works, Work, ImageWrapper, Description, WorkText, WorkTitle, WorkImage
+    Works, Work, ImageWrapper, Description, WorkText, WorkTitle, WorkImage,Box
 }

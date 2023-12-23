@@ -8,9 +8,11 @@ type WorkPropsType = {
     srcImg: string
     title: string
     text: string
+    detectEl: number
 }
 
 export const Work = (props: WorkPropsType) => {
+    console.log('detectEl',props.detectEl)
     return (
         <S.Work>
             <S.ImageWrapper>
@@ -19,7 +21,7 @@ export const Work = (props: WorkPropsType) => {
             </S.ImageWrapper>
             <S.Description>
                 <S.WorkTitle>{props.title}</S.WorkTitle>
-                <S.WorkText>{props.text}</S.WorkText>
+                <S.WorkText>{props.detectEl > 0 ? props.text : 'Проекты отсутствуют!'}</S.WorkText>
                 <Link active href={'#'}>code</Link>
                 <Link href={'#'}>demo</Link>
             </S.Description>
